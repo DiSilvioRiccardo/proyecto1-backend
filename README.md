@@ -1,15 +1,3 @@
-# Plantilla Basica de Backend #2
+**Entrega proyecto 1 Backend**
 
-Instrucciones:
-
-1. Meter archivos en una carpeta.
-2. Abrir en VSCode (o IDE preferida).
-3. Abrir una terminal (o similar).
-4. Instalar dependencias (npm i).
-5. Correr proyecto. (npm start).
-
-Cambios:
-
-- Instalación de Prettier.
-- Instalación de Babel.
-  > Para mas información sobre usar Babel: https://github.com/babel/example-node-server
+Profesor, le dejo en el json una coleccion de postman para que pruebe los endpoints super facil! La estuve usando durante el desarrollo. Le dejo tambien la base de datos de cloud atlas que use pero esta bienvenido a modificarla por su propia!

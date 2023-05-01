@@ -10,12 +10,13 @@ import deliveryRoutes from './delivery/delivery.routes';
 const app = express();
 
 // Conexión a MongoDB usando mongoose
+//Le dejo las credenciales en el envio a la actividad
 mongoose
   .connect(
     'mongodb+srv://' +
-      "disilvioriccardo" +
+      "hola" +
       ':' +
-      "HZ6bz6YL7CYwO71f" +
+      "profesor" +
       '@proyecto1cluster.fxavezs.mongodb.net/proyecto1db',
     {
       useNewUrlParser: true,
