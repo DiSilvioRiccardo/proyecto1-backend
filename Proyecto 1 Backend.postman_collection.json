@@ -1,0 +1,629 @@
+{
+	"info": {
+		"_postman_id": "42fe9161-ccc3-44f8-8835-245303b8cd0c",
+		"name": "Proyecto 1 Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18710071"
+	},
+	"item": [
+		{
+			"name": "/user",
+			"item": [
+				{
+					"name": "User GET with ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/?id=644d9ff6001d003ea27f0239",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "644d9ff6001d003ea27f0239"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GET with email and password",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/?email=disilvioriccardo@gmail.com&password=mydude",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "disilvioriccardo@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "mydude"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST user create a client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ricardo Salas\",\n    \"email\": \"rsalas@gmail.com\",\n    \"password\": \"iamverysmart\",\n    \"phone_number\": 3006593450,\n    \"address\": \"Cra 52#76-166\",\n    \"type\": \"cliente\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST user create a delivery driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nayelis Perez\",\n    \"email\": \"nperez@gmail.com\",\n    \"password\": \"iamverysmart\",\n    \"phone_number\": 3006593450,\n    \"address\": \"Cra 52#76-166\",\n    \"type\": \"domiciliario\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST user create a restaaurant admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Dino Di Silvio\",\n    \"email\": \"ddisilvio@gmail.com\",\n    \"password\": \"iamverysmart\",\n    \"phone_number\": 3006593450,\n    \"address\": \"Cra 52#76-166\",\n    \"type\": \"administrador de restaurante\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"644eb535a0b239c51a1d9917\",\n    \"name\": \"Andres Borrero\",\n    \"email\": \"aborrero@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"644eb535a0b239c51a1d9917\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/restaurant",
+			"item": [
+				{
+					"name": "GET restaurant with name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restaurant/?name=la",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "la"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET restaurant with category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restaurant/?category=asados",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "asados"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET restaurant with id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/restaurant/?id=644ecce7360ee1eee1b06a48",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "644ecce7360ee1eee1b06a48"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Di Silvio Trattoria\",\n    \"address\": \"Calle del Sierpe 9\",\n    \"categories\": [\"italiano\"],\n    \"userId\": \"644fcde14cfa4147b87c5326\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/restaurant/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH restaurant",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"644ecd6dfe1cfd390dc3592f\",\n    \"popularity\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/restaurant/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"restaurant",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/product",
+			"item": [
+				{
+					"name": "POST product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Lasagna bolognesa\",\n    \"description\": \"Lasagna de tomate con carne molida\",\n    \"category\": \"italiano\",\n    \"restaurant\": \"644fce38e38d585251e4d82d\",\n    \"user\": \"644fcde14cfa4147b87c5326\",\n    \"price\": 22000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"644ef19d984b076a88f2498f\",\n    \"price\": 28000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET product by restaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/?restaurant=644fce38e38d585251e4d82d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "restaurant",
+									"value": "644fce38e38d585251e4d82d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET product by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/?category=italiano",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "italiano"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/delivery",
+			"item": [
+				{
+					"name": "User creates delivery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"receiving_user\": \"644d9ff6001d003ea27f0239\",\n    \"products\": [\n        [\"644fce95e38d585251e4d835\", 1],\n        [\"644fce78e38d585251e4d831\", 2]\n    ],\n    \"address\": \"Cra 52#76-166 Casa 8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/delivery/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User selects products, sends order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"644fceeae38d585251e4d83f\",\n    \"action\": \"enviado\",\n    \"products\": [\n        [\"644fce95e38d585251e4d835\", 1],\n        [\"644fce78e38d585251e4d831\", 2]\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/delivery/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User accepts delivery, gets set as delivery user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_user\": \"644fcdc74cfa4147b87c5324\",\n    \"action\": \"aceptado\",\n    \"id\": \"644fceeae38d585251e4d83f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/delivery/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrator gives delivery driver the food and ACKs",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restaurant_user\": \"644fcde14cfa4147b87c5326\",\n    \"action\": \"recibido\",\n    \"id\": \"644fceeae38d585251e4d83f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/delivery/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delivery driver arrives at destination and ACKs",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_user\": \"644fcdc74cfa4147b87c5324\",\n    \"action\": \"en direccion\",\n    \"id\": \"644fceeae38d585251e4d83f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/delivery/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delivery driver notifies delivery is done",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"delivery_user\": \"644fcdc74cfa4147b87c5324\",\n    \"action\": \"realizado\",\n    \"id\": \"644fceeae38d585251e4d83f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/delivery/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delivery",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
